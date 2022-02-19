@@ -15,4 +15,4 @@ Project notes
 - Every part except the config server has a properties file named bootstrap.properties in its resources folder, as it has a predefined properties file with the project's name in config server's default location for keeping the properties files.
 
 
-> This project is in the alpha stage
+> This project is in the development stage

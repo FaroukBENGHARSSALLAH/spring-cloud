@@ -30,7 +30,10 @@ import com.farouk.bengarssallah.cloud.spring.utility.BillStates;
 
 import static com.farouk.bengarssallah.cloud.spring.utility.StringUtils.formatUuid;
 import static com.farouk.bengarssallah.cloud.spring.utility.StringUtils.generatePeriod;
-import static com.farouk.bengarssallah.cloud.spring.utility.StringUtils.generateDeadline
+import static com.farouk.bengarssallah.cloud.spring.utility.StringUtils.generateDeadline;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 
 import lombok.AllArgsConstructor;

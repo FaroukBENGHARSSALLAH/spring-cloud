@@ -17,4 +17,4 @@ Project notes
 - [x] @EnableZuulProxy will auto-configure the project as proxy for microservices
 - [x] @EnableDiscoveryClient will register the project in eureka server
 
-> This project is in the alpha stage
+> This project is in the development stage

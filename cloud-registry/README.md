@@ -15,4 +15,4 @@ Project notes
 
 - [x] @EnableEurekaServer : will auto-configure the project as a microservices registry
 
-> This project is in the alpha stage
+> This project is in the development stage

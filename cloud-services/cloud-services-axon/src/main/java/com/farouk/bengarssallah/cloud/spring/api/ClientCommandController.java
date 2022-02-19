@@ -23,6 +23,9 @@ import com.farouk.bengarssallah.cloud.spring.command.DeleteClientCommand;
 import com.farouk.bengarssallah.cloud.spring.command.UpdateClientCommand;
 import com.farouk.bengarssallah.cloud.spring.dto.ClientRequestDTO;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import static com.farouk.bengarssallah.cloud.spring.utility.StringUtils.formatUuid;
 
 import lombok.AllArgsConstructor;

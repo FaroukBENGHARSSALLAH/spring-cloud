@@ -34,6 +34,9 @@ import com.farouk.bengarssallah.cloud.spring.exception.ClientNotFoundException;
 import com.farouk.bengarssallah.cloud.spring.service.BillService;
 import com.farouk.bengarssallah.cloud.spring.utility.BillStates;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 import lombok.AllArgsConstructor;

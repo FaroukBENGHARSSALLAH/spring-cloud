@@ -25,6 +25,9 @@ import com.farouk.bengarssallah.cloud.spring.dto.ClientRequestDTO;
 import com.farouk.bengarssallah.cloud.spring.feign.BillFeignClient;
 import com.farouk.bengarssallah.cloud.spring.service.ClientService;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import lombok.AllArgsConstructor;
 
 import static com.farouk.bengarssallah.cloud.spring.utility.StringUtils.formatUuid;

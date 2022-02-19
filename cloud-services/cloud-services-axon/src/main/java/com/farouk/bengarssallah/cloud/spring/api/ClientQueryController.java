@@ -14,6 +14,9 @@ import com.farouk.bengarssallah.cloud.spring.domain.Client;
 import com.farouk.bengarssallah.cloud.spring.query.GetAllClientsQuery;
 import com.farouk.bengarssallah.cloud.spring.query.GetClientQuery;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import lombok.AllArgsConstructor;
 
 import static com.farouk.bengarssallah.cloud.spring.utility.StringUtils.formatUuid;

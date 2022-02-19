@@ -24,7 +24,5 @@ Project Structure
 - [x] Resigtry Project
 - [x] Proxy Project
 - [x] Microservices Projects
-- [x] Client Microservices
-- [x] Bill Microservices
 
 > This project is in the development stage
