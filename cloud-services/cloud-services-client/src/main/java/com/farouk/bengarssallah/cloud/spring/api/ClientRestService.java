@@ -57,8 +57,8 @@ public class ClientRestService {
       })
 	  @PutMapping("/put/{reference}")
 	  public ResponseEntity<Client> putClient(@PathVariable String reference, @RequestBody ClientRequestDTO requestDTO) {
-		  Client client = clientService.putClient(new Client(formatUuid(reference), requestDTO.getFullName(), 
-          		requestDTO.getEmail(), new Date()));
+		  Client client = clientService.putClient(formatUuid(reference), requestDTO.getFullName(), 
+          		requestDTO.getEmail());
           return new ResponseEntity<Client>(client, HttpStatus.OK);
 	  }
 

@@ -10,7 +10,7 @@ public interface ClientService {
 	
 	public Client addClient(Client client);
 	
-	public Client putClient(Client client);
+	public Client putClient(UUID reference, String fullName, String email);
 	
 	public void putClientUnpaidBills(UUID reference);
 

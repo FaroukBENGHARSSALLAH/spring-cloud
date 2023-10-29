@@ -5,7 +5,6 @@ import java.util.UUID;
 
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
-import org.axonframework.modelling.command.AggregateIdentifier;
 import org.axonframework.modelling.command.AggregateLifecycle;
 import org.axonframework.spring.stereotype.Aggregate;
 
@@ -20,7 +19,7 @@ import lombok.Getter;
 
 @Aggregate
 @Getter
-public class BillAggregate extends BaseAggregate<UUID> {
+public class BillAggregate extends BaseAggregate {
 	
 	private String type;
 	private String period;
@@ -88,5 +87,7 @@ public class BillAggregate extends BaseAggregate<UUID> {
 	public void on(BillDeletedEvent event) {
 		  this.reference = event.getReference();
 	}
+	
+	
 
 }

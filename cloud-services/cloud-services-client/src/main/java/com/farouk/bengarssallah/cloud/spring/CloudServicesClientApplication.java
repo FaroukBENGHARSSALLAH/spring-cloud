@@ -39,7 +39,7 @@ public class CloudServicesClientApplication {
 	CommandLineRunner start(ClientRepository clientRepository) {
 		return args->{
 			Stream.of("First","Second","Third").forEach(cn->{
-				clientRepository.save(new Client(UUID.randomUUID(), cn, cn+"@gmail.com", new Date()));
+				clientRepository.save(new Client(UUID.randomUUID(), cn, cn+"@gmail.com", new Date(), 0));
 			});
 			clientRepository.findAll().forEach(System.out::println);
 		};

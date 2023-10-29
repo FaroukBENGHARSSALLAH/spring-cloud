@@ -1,13 +1,15 @@
 package com.farouk.bengarssallah.cloud.spring.aggregate;
 
+import java.util.UUID;
+
 import org.axonframework.modelling.command.AggregateIdentifier;
-import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
 import lombok.Getter;
 
-public abstract class BaseAggregate<T> {
+
+public abstract class BaseAggregate {
 	
 	@AggregateIdentifier
-	@Getter protected T reference;
+	@Getter protected UUID reference;
 	
 }

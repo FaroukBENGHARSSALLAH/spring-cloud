@@ -6,7 +6,6 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 import com.farouk.bengarssallah.cloud.spring.domain.Client;
-import com.farouk.bengarssallah.cloud.spring.dto.ClientRequestDTO;
 import com.farouk.bengarssallah.cloud.spring.exception.ClientNotFoundException;
 import com.farouk.bengarssallah.cloud.spring.repository.ClientRepository;
 
@@ -26,12 +25,12 @@ public class ClientServiceImpl  implements ClientService {
 	}
 	
 	
-	public Client putClient(ClientRequestDTO clientDTO) {
-		log.info("Client Updated with Reference : " + client.getReference());
-		Client persistedClient = clientRepository.getOne(client.getReference());
+	public Client putClient(UUID reference, String fullName, String email) {
+		log.info("Client Updated with Reference : " + reference);
+		Client persistedClient = clientRepository.getOne(reference);
 		if(persistedClient == null) throw new ClientNotFoundException("Client Not in the system");
-		persistedClient.setFullName(client.getFullName());
-		persistedClient.setEmail(client.getEmail());
+		persistedClient.setFullName(fullName);
+		persistedClient.setEmail(email);
 		return clientRepository.save(persistedClient);
 	}
 	
